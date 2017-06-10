@@ -1,4 +1,6 @@
 # Simple Assertion
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/joe-crick/simple-assertion.svg)](https://greenkeeper.io/)
 I've wanted to do DbC in JS for a while. There are libs out there, but they're out of date and do too much. 
 All I really needed was to have the ability to test the truth value of propositions. Hence, Simple Assertion.
 
