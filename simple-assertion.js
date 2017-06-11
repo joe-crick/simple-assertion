@@ -22,7 +22,7 @@ function runAssertions(assertions, location){
  * Indicates a precondition
  * @param assertions
  */
-export function pre(assertions) {
+export function pre(...assertions) {
   runAssertions(assertions, 'Precondition');
 }
 
@@ -30,6 +30,6 @@ export function pre(assertions) {
  * Indicates a post condition
  * @param assertions
  */
-export function post(assertions) {
+export function post(...assertions) {
   runAssertions(assertions, 'Postcondition');
 }

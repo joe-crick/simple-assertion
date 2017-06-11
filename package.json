@@ -4,7 +4,9 @@
   "description": "I've wanted to do DbC in JS for a while. There are libs out there, but they're out of date and do too much.  All I really needed was to have the ability to test the truth value of propositions. Hence, Simple Assertion.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel simple-assertion.js --presets babel-preset-es2015 -o dist/index.js"
+    "build": "npm-run-all test build-client",
+    "build-client": "babel simple-assertion.js --presets babel-preset-es2015 -o dist/index.js",
+    "test": "babel-tape-runner tests/tests.js | faucet"
   },
   "repository": {
     "type": "git",
@@ -12,13 +14,23 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/joe-crick/simple-assertion/issues"
   },
   "homepage": "https://github.com/joe-crick/simple-assertion#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "babel-tape-runner": "^2.0.1",
+    "faucet": "0.0.1",
+    "npm-run-all": "^4.0.2",
+    "tape": "^4.6.3"
   }
 }
