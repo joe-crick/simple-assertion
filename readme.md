@@ -13,7 +13,7 @@ const someOtherVar = myVar + 1;
 post(someOtherVar === myVar + 1)
 ```
 
-Simple Assertion evaluates the truth values of the elements in each Array it receives. If it encounters a falsey value
+Simple Assertion evaluates the truth values of arguments it receives. If it encounters a false value
 it will throw an error, and create an error object indicating what condition failed (pre | post).
 
-finis.
+_finis_.
