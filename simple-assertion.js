@@ -14,7 +14,10 @@ function ConditionError(location) {
  */
 function runAssertions(assertions, location){
     if(assertions.indexOf(false) > -1) {
-      try { throw new Error()} catch (error) {
+      try { 
+        throw new Error()
+      } 
+      catch (error) {
         console.error('error:', location, error);
         throw new ConditionError(location)
       }
