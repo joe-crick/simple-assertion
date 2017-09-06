@@ -12,7 +12,7 @@ function ConditionError(location) {
  * @param assertions
  * @param location
  */
-function runAssertions(assertions, location){
+function testAssertions(assertions, location){
     if(assertions.indexOf(false) > -1) {
       try { 
         throw new Error()
@@ -29,7 +29,7 @@ function runAssertions(assertions, location){
  * @param assertions
  */
 export function pre(...assertions) {
-  runAssertions(assertions, 'Precondition');
+  testAssertions(assertions, 'Precondition');
 }
 
 /**
@@ -37,5 +37,5 @@ export function pre(...assertions) {
  * @param assertions
  */
 export function post(...assertions) {
-  runAssertions(assertions, 'Postcondition');
+  testAssertions(assertions, 'Postcondition');
 }
